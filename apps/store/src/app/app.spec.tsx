@@ -22,6 +22,6 @@ describe('App', () => {
       </BrowserRouter>
     );
 
-    expect(getByText('Welcome to store!')).toBeTruthy();
+    expect(getByText('Board Game Hoard')).toBeTruthy();
   });
 });

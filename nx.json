@@ -27,12 +27,27 @@
     ]
   },
   "projects": {
+    "api": {
+      "tags": []
+    },
+    "api-util-interface": {
+      "tags": []
+    },
     "store": {
       "tags": []
     },
     "store-e2e": {
       "tags": [],
       "implicitDependencies": ["store"]
+    },
+    "store-feature-game-detail": {
+      "tags": []
+    },
+    "store-ui-shared": {
+      "tags": []
+    },
+    "store-util-formatters": {
+      "tags": []
     }
   }
 }
