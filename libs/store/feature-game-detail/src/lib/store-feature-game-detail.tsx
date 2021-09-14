@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import styles from './store-feature-game-detail.module.scss';
+import { Game } from '@bg-hoard/util-interface';
 
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -19,7 +20,7 @@ export interface StoreFeatureGameDetailProps
 
 export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
   const [state, setState] = useState<{
-    data: any;
+    data: Partial<Game>;
     loadingState: 'success' | 'error' | 'loading';
   }>({
     data: {},
@@ -77,7 +78,7 @@ export const StoreFeatureGameDetail = (props: StoreFeatureGameDetailProps) => {
               component="p"
               className={styles['game-rating']}
             >
-              <strong>Rating:</strong> {formatRating(state.data.rating)}
+              <strong>Rating:</strong> {formatRating(state.data.rating || 0)}
             </Typography>
           </CardContent>
           <CardActions>
