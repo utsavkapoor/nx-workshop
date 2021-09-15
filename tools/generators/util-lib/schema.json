@@ -17,11 +17,12 @@
       "description": "Provide the directory you want your library",
       "$default": {
         "$source": "argv",
-        "index": 0
+        "index": 1
       },
       "x-prompt": {
         "message": "Which folder do you want your library",
         "type": "list",
+        "enum": ["api", "store", "shared"]
         "items": [
           {
             "value": "store",

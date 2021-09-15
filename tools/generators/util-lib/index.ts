@@ -1,12 +1,12 @@
-import {
-  Tree,
-  formatFiles,
-  installPackagesTask,
-  moveFilesToNewDirectory
-} from '@nrwl/devkit';
+import { Tree, formatFiles, installPackagesTask } from '@nrwl/devkit';
 import { libraryGenerator, moveGenerator } from '@nrwl/workspace/generators';
 
-export default async function (tree: Tree, schema: any) {
+interface Schema {
+  name: string;
+  directory: 'store' | 'api' | 'shared';
+}
+
+export default async function (tree: Tree, schema: Schema) {
   await libraryGenerator(tree, {
     name: `util-${schema.name}`,
     directory: schema.directory,
