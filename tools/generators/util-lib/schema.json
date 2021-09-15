@@ -22,19 +22,23 @@
       "x-prompt": {
         "message": "Which folder do you want your library",
         "type": "list",
-        "enum": ["api", "store", "shared"]
+        "enum": ["api", "store", "shared"],
         "items": [
-          {
-            "value": "store",
-            "label": "store"
-          },
           {
             "value": "api",
             "label": "api"
           },
           {
+            "value": "store",
+            "label": "store"
+          },
+          {
             "value": "shared",
             "label": "shared"
+          },
+          {
+            "value": "vide-games",
+            "label": "vide-games"
           }
         ]
       }
